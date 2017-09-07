@@ -1,0 +1,2 @@
+tox_output_host_dir: "{% if groups['all'] | length > 1 %}{{ inventory_hostname }}/{% endif %}"
+tox_output_log_path: "{{ zuul.executor.log_root }}/{{ tox_output_host_dir }}tox"

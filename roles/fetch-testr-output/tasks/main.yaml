@@ -3,9 +3,7 @@
     path: "{{ zuul_work_dir }}/.testrepository"
   register: testrepository_stat
 
-- name: Process testr artifacts
-  include: process.yaml
-  when:
-    - testrepository_stat.stat.exists
-    - false
-
+# - name: Process testr artifacts
+#   include: process.yaml
+#   when:
+#     - testrepository_stat.stat.exists
