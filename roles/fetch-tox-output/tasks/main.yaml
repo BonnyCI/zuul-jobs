@@ -7,6 +7,10 @@
     use_regex: yes
   register: result
 
+- name: show found directories
+  debug:
+    var: result
+
 - name: Set tox log path for multiple nodes
   set_fact:
     log_path: "{{ zuul.executor.log_root }}/{{ inventory_hostname }}/tox"
